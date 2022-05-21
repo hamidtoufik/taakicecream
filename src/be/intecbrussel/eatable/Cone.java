@@ -1,8 +1,8 @@
 package be.intecbrussel.eatable;
 
-public class Cone extends Eatable {
+public class Cone implements Eatable {
     //array met verchillende flavors
-    private Flavors balls;
+    private Flavors[] balls;
 
     //---------------------------------------------------------------------------
 
@@ -11,11 +11,13 @@ public class Cone extends Eatable {
 
     }
     //getting a error when try to put a enum as parameter
-    public Cone(String Flavors){
+    public Cone(Flavors[] balls){
+        this.balls = balls;
 
     }
     //--------------------------------------------------------------------------
     //methode eat
+    @Override
     public void eat(){
 
         Cone.Flavors flavor = null;
@@ -45,10 +47,12 @@ public class Cone extends Eatable {
         STRACIATELLA,
         MOKKA,
         PISTACHE;
-
+/*
         Cone GetType(Cone Flavors){
             return Flavors;
         }
+        */
+
     }
 
 

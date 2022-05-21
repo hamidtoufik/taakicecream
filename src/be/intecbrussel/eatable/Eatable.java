@@ -1,9 +1,8 @@
 package be.intecbrussel.eatable;
 
-public class Eatable {
+public interface Eatable {
     // methode eat instellen
 
-    public void eat(){
-
-    }
+    default void eat(){
+    };
 }

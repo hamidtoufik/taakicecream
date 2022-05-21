@@ -1,12 +1,12 @@
 package be.intecbrussel.eatable;
 
-public class IceRocket extends Eatable{
+public class IceRocket implements Eatable{
     public IceRocket(){
 
     }
 
     @Override
     public void eat() {
-        super.eat();
-    }
+        System.out.println("eating a iceRocket");
+    };
 }

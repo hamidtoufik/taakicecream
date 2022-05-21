@@ -1,16 +1,12 @@
 package be.intecbrussel.eatable;
 
-public class Magnum extends Eatable{
+public class Magnum implements Eatable{
     //variabele instellen
-    private Magnum type;
+    private Magnumtype type;
 
-    public void setType(Magnum type) {
-        this.type = type;
-    }
 
-    public Magnum getType() {
-        return type;
-    }
+
+
 
     //-------------------------------------------------------
     //constructor
@@ -18,11 +14,12 @@ public class Magnum extends Eatable{
     public Magnum(){
 
     }
-    public Magnum(Magnum type){
+    public Magnum(Magnumtype type){
+        this.type = type;
 
     }
     //---------------------------------------------------
-
+    @Override
     public void eat(){
 
         Magnumtype type = null;
@@ -36,6 +33,11 @@ public class Magnum extends Eatable{
 
         }
         System.out.println(text);
+    }
+    //-----------------------------------------------------------------
+
+    public Magnumtype getType() {
+        return type;
     }
 
 
